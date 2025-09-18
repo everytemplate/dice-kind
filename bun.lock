@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "workspaces": {
+    "": {
+      "name": "gm-kind",
+      "dependencies": {
+        "@everyprotocol/kind-as": "^0.1.1",
+      },
+    },
+  },
+  "packages": {
+    "@everyprotocol/kind-as": ["@everyprotocol/kind-as@0.1.1", "", { "bin": { "kasc": "bin/index.js" } }, "sha512-qc6zcZKchTbPc9cXD+U7APAUWdkrEMdDOjA9E3lwSjl7EWvnTf2fgS0xK06G9z860pGoFtuj5ae8o5x+bFYFEw=="],
+  }
+}

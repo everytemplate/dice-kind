@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "lib": ["ES2015"],
+    "typeRoots": ["./node_modules/@everyprotocol/kind-as/std/types"],
+    "types": ["assembly"]
+  },
+  "include": ["assembly/*.ts"]
+}

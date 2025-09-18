@@ -1,0 +1,13 @@
+{
+  "name": "dice-kind",
+  "version": "0.1.0",
+  "description": "A demo Kind contract for dice written in AssemblyScript",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat"
+  },
+  "dependencies": {
+    "@everyprotocol/kind-as": "^0.1.2"
+  }
+}
