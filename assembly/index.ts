@@ -1,12 +1,12 @@
 @kind
 class Dice {
-  face!: Bytes32;
+  face: Bytes32;
 
   meta(): Json {
     let data = json.create("{}");
     json.setString(data, "/name", `Dice #${object.id()}`);
     json.setString(data, "/description", "A dice");
-    json.setString(data, "/image", object.assetUri2("picture"));
+    json.setString(data, "/image", "facet://picture");
     return data;
   }
 
