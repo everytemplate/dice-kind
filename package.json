@@ -5,7 +5,13 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat"
+    "build:kind": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat",
+    "hash:matter": "every matter hash build/index.wasm elements/data.json --json build/hashes.json",
+    "pick:matter": "jq -re --arg path \"$p\" '.[] | select(.path==$p) | .hash' build/hashes.json --arg p",
+    "register:matter": "echo every matter register build/index.wasm elements/data.json --json register/matter.json --no-quiet",
+    "register:kind": "every kind register $(npm run --silent pick:matter build/index.wasm) $(npm run --silent pick:matter elements/data.json) '[1]' '[]' --json register/kind.json --no-quiet",
+    "preregister:matter": "npm run build:kind",
+    "preregister:kind": "npm run build:kind && npm run hash:matter"
   },
   "dependencies": {
     "@everyprotocol/kind-as": "^0.1.2"

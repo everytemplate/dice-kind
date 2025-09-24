@@ -4,11 +4,11 @@
     "": {
       "name": "gm-kind",
       "dependencies": {
-        "@everyprotocol/kind-as": "^0.1.1",
+        "@everyprotocol/kind-as": "^0.1.2",
       },
     },
   },
   "packages": {
-    "@everyprotocol/kind-as": ["@everyprotocol/kind-as@0.1.1", "", { "bin": { "kasc": "bin/index.js" } }, "sha512-qc6zcZKchTbPc9cXD+U7APAUWdkrEMdDOjA9E3lwSjl7EWvnTf2fgS0xK06G9z860pGoFtuj5ae8o5x+bFYFEw=="],
+    "@everyprotocol/kind-as": ["@everyprotocol/kind-as@0.1.2", "", { "bin": { "kasc": "bin/index.js" } }, "sha512-hE8LTE2m9vtxovX9AKCO7TZIVTfneSDq04CJZ0Osh7f/MXDZDQsqFhNhrn4cwgy2Do5amMeGJPNFxOF1Lv2GSA=="],
   }
 }
