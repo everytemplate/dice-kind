@@ -14,6 +14,6 @@
     "preregister:kind": "npm run build:kind && npm run hash:matter"
   },
   "dependencies": {
-    "@everyprotocol/kind-as": "^0.1.2"
+    "@everyprotocol/kind-as": "^0.1.4"
   }
 }

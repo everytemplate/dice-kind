@@ -2,7 +2,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "skipLibCheck": true,
-    "lib": ["ES2015"],
+    "noLib": true,
     "typeRoots": ["./node_modules/@everyprotocol/kind-as/std/types"],
     "types": ["assembly"]
   },
