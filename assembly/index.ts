@@ -11,7 +11,7 @@ class Dice {
   }
 
   picture(): Image {
-    let canvas = image.create(800, 800, 2);
+    let canvas = image.create(800, 800, ColorType.Rgb8);
     // Draw white background with black border for the dice
     const WHITE = Pixel.Rgb8(255, 255, 255);
     const BLACK = Pixel.Rgb8(0, 0, 0);
