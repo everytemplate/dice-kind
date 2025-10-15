@@ -6,11 +6,11 @@
   "type": "module",
   "scripts": {
     "build:kind": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat",
-    "register:kind": "every kind register $(every matter pick build/index.wasm elements/data.json) '[1]' '[]' --json register/kind.json --no-quiet",
+    "register:kind": "every kind register $(every matter pick build/index.wasm elements/data.json) '[1]' '[]' --json register/kind.json",
     "preregister:kind": "npm run hash:matter",
     "hash:matter": "every matter hash build/index.wasm elements/data.json --json register/hashes.json",
     "prehash:matter": "npm run build:kind",
-    "register:matter": "every matter register build/index.wasm elements/data.json --json register/matter.json --no-quiet",
+    "register:matter": "every matter register build/index.wasm elements/data.json --json register/matter.json",
     "preregister:matter": "npm run build:kind"
   },
   "dependencies": {
