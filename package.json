@@ -7,7 +7,7 @@
   "scripts": {
     "build:kind": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat",
     "register:matter": "every matter register build/index.wasm elements/data.json --json register/matter.json",
-    "register:kind": "every kind register $(every pick matter.hash=build/index.wasm matter.hash=elements/data.json) '[1]' '[]' --json register/kind.json",
+    "register:kind": "every kind register $(every pick matter.hash=build/index.wasm matter.hash=elements/data.json) --elements build/index.wasm --json register/kind.json",
     "preregister:matter": "npm run build:kind"
   },
   "dependencies": {
