@@ -5,11 +5,11 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build:kind": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat",
-    "register:matter": "every matter register build/index.wasm elements/data.json --json register/matter.json",
-    "register:kind": "every kind register $(every pick matter.hash=build/index.wasm matter.hash=elements/data.json) --elements build/index.wasm --json register/kind.json",
-    "register:all": "run-s 'register:matter -- {@}' 'register:kind -- {@}' --",
-    "preregister:matter": "npm run build:kind"
+    "build": "kasc assembly/index.ts --out build/index.wasm --text build/index.wat",
+    "upload": "every matter register build/index.wasm elements/data.json --json register/matter.json",
+    "register": "every kind register $(every pick matter.hash=build/index.wasm matter.hash=elements/data.json) --elements build/index.wasm --json register/kind.json",
+    "all": "run-s 'upload -- {@}' 'register -- {@}' --",
+    "preupload": "run-s build"
   },
   "dependencies": {
     "@everyprotocol/kind-as": "^0.1.4",
